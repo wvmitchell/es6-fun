@@ -15,5 +15,9 @@ var anagramChecker = exports.anagramChecker = function anagramChecker(wordOne, w
 };
 
 var clean = function clean(word) {
-    return word.toLowerCase().replace(' ', '').split('').sort().join('');
+    var loweredWord = word.toLowerCase()
+    var spacelessWord = loweredWord.replace(' ', '')
+    var arrayOfLetters = spacelessWord.split('')
+    var sortedArray = arrayOfLetters.sort()
+    return sortedArray.join('')
 };
